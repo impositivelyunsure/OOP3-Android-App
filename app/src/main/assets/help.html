@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>AI Journal Companion - Help</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 16px; line-height: 1.45; }
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; margin-top: 18px; }
+    code { background: #f2f2f2; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Help</h1>
+  <p>Write a journal entry and tap <b>Analyze</b>. The app sends your text to the local FastAPI server
+     that uses Ollama <b>gemma:2b</b> to detect the dominant emotion and return a one-line advice.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Emotion + advice card</li>
+    <li>History list (drag an item onto the Trash to delete)</li>
+    <li>Sort by emotion (Bubble / Insertion / Selection)</li>
+    <li>Search by emotion (HashMap / Binary Tree / Doubly Linked List)</li>
+    <li>Pie chart of emotion distribution</li>
+  </ul>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li>Ensure FastAPI is running: <code>uvicorn main:app --host 0.0.0.0 --port 8000 --reload</code></li>
+    <li>Run Ollama and have <code>gemma:2b</code> pulled: <code>ollama serve</code>, <code>ollama pull gemma:2b</code></li>
+  </ul>
+</body>
+</html>
